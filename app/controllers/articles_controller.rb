@@ -21,7 +21,14 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
-  
+
+  protected
+
+  def resource_not_found
+    flash[:alert] = "The article you are looking for could not be found"
+    redirect_to root_path
+  end
+
   private
 
   def article_params
