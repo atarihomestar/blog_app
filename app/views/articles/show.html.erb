@@ -1,0 +1,11 @@
+<article class="article-details">
+  <div class="article-title-details">
+    <%= @article.title %>
+  </div>
+  <div class="glyphicon glyphicon-calendar">
+    <%= @article.created_at.strftime("%b %d %Y") %>
+  </div>
+  <div class="article-body-details">
+    <%= @article.body %>
+  </div>
+</article>
