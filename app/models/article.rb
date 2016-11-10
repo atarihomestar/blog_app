@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
-  validates_presence_of :title, :body
+  validates :body, presence: true
+  validates :title, presence: true
 
   default_scope { order(created_at: :desc) }
 end
